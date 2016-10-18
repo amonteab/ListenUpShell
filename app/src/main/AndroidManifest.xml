@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.projects.aaronmonteabaro.listenup">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".InfoActivity"
+            android:label="General Information"/>
+        <activity android:name=".CurrentTree"
+            android:label="Current Tree Progress"/>
+        <activity android:name=".SongInfo"
+            android:label="Song Details"/>
+        <activity android:name=".NewTree"
+            android:label="Grow A New Tree"/>
+        <activity android:name=".SearchTrees"
+            android:label="Search Users Trees"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.projects.aaronmonteabaro.listenup.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                style="@style/mainButtonstyle"
+                android:id="@+id/playButton"
+                android:src="@drawable/play"
+                />
+
+            <ImageView
+                style="@style/mainButtonstyle"
+                android:id="@+id/pauseButton"
+                android:src="@drawable/pause"
+                />
+
+            <ImageView
+                style="@style/mainButtonstyle"
+                android:id="@+id/infoButton"
+                android:src="@drawable/exclamation"
+                />
+
+            <ImageView
+                style="@style/mainButtonstyle"
+                android:id="@+id/treeButton"
+                android:src="@drawable/tree"
+                />
+
+            <ImageView
+                style="@style/mainButtonstyle"
+                android:id="@+id/numberButton"
+                android:src="@drawable/number"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#CFD8DC">
+
+            <TextView
+                style="@style/mainInfoTextView"
+                android:text="@string/nowPlaying"
+                />
+
+            <TextView
+                style="@style/mainInfoTextView"
+                android:text="@string/currentSong"
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                style="@style/songPicButtonStyle"
+                android:id="@+id/currentSongIcon"
+                android:src="@drawable/ashes"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                />
+
+            <ImageView
+                android:id="@+id/treeBranch"
+                android:src="@drawable/treebranch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/currentSongIcon"
+                />
+        </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <ImageView
+                style="@style/songPicButtonStyle"
+                android:layout_weight="1"
+                android:id="@+id/nextSongIcon1"
+                android:src="@drawable/scurrilous"
+                android:layout_marginBottom="8dp"
+                />
+
+            <ImageView
+                style="@style/songPicButtonStyle"
+                android:layout_weight="1"
+                android:id="@+id/nextSongIcon2"
+                android:src="@drawable/distillers"
+                android:layout_marginBottom="8dp"
+                />
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/treeButtonStyle"
+                android:id="@+id/newTreeButton"
+                android:text="@string/newTreeButton"
+                android:background="#FF5722"
+                />
+
+            <TextView
+                style="@style/treeButtonStyle"
+                android:id="@+id/searchTreesButton"
+                android:text="@string/searchTreeButton"
+                android:background="#FF9800"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

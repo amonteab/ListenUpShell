@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">ListenUp</string>
+    <string name="nowPlaying">Now Playing</string>
+    <string name="currentSong">Current Song Title</string>
+
+    <string name="newTreeButton">New\nTree</string>
+    <string name="searchTreeButton">Search\nTrees</string>
+    <string name="swapTreeButton">Swap\nTree</string>
+    <string name="newTreeFromThisSongButton">New Tree\nFrom This Song</string>
+    <string name="listenTreeNowButton">Listen to This\nTree Now!</string>
+    <string name="saveTreeButton">Save This\nTree for Later</string>
+    <string name="uploadCurrentTreeButton">Upload Current Tree</string>
+    <string name="createAndListenButton">Create Tree\nAnd Start Listening</string>
+    <string name="cancelButton">Cancel\nNew\nTree</string>
+
+    <string name="infoText">
+        ListenUp, name is working title.\n\n
+        Concept:\n  Select a song to start a tree with and using predictive suggestions for each new song you\'ll have two choices
+        of songs that are similar or popular with others.  This in turns leads to another choice and another, until you have as
+        big a tree as you\'d like.  Then you can post it online for others to see and listen too.  All trees are saved automatically and can be
+        switched back to anytime.\n
+        This is a streaming service, songs can be uploaded from your library but will generally be streamed.\n\n
+
+        Main Screen Controls:\n  The red ! button is the info button - now it shows this screen but that is likely to change in the future.\n
+
+        \n The Tree button shows your current tree from top to bottom, showing all the choices you made as well as the songs you didn\'t choose.
+        Here you\'ll be able to switch between trees you have previously grown.\n\n
+
+        The last icon on top is the count of songs your current tree is on.\n\n
+
+        The TextViews will contain the song title, band name, and album name of the currently playing song.\n\n
+
+        The first album icon represents the currently playing song.  Clicking on it will bring up a details screen for that song/band/album.\n\n
+
+        The second two icons represent your two current choices for next song.  Clicking them will likewise bring up a detail screen for each choice.\n\n
+
+        While clicking shows the song details, to make your selection simply drag your finger from the current song to your desired next song.  Should no next song be entered
+        manually, one will be picked based on whatever predictive information is at hand.  This will be noted in the full Tree view.\n\n
+
+        The new tree button will allow you to pick a starting point for a new tree.  This can be a song from your library or perhaps one pulled from
+        the web.  If your chosen song cannot be downloaded, we\'ll use information about that choice to make the starting point selection based on
+        predictive information.\n\n
+
+        The search trees button will allow the user to search the online database of trees uploaded from other users around the world, bring them to
+        the device and listen to them.  Perhaps give feedback as well.  Much later perhaps a more social component involved.\n\n\n\n
+
+        The majority of the icons here were created by PixelBuddha and downloaded from FlatIcon.com.  The others were created by myself.
+    </string>
+
+    <string name="currentTreeText">
+        This activity shows a tree diagram of all the songs you\'ve listened to and all the choices you didn\'t pick, including how they were picked,
+         and the ability to check out details of the songs or go back and explore the other branch options.  There are also buttons for
+        creating a new tree, swapping the currently active tree, or searching the web db for more trees.\n\n
+
+        The start new button will show a screen that will give the user the option to select from library or search online by
+        song name, and then an updated current tree screen will load with the starting point and the first two options.\n\n
+
+        The swap button will also bring up a dialog or fragment for swapping trees saved on device, or redirect to the search tree activity. Or the search
+         button will load said activity.\n\n
+
+        Both of these will include the fragment class and will have to explore using permissions to access device storage and web applications.
+    </string>
+
+    <string name="songDetailsText">
+        This screen will house the details of the song/album that was selected as well as the band/performer and suggestions for
+        further listening.  The user will be able to swip left or right to move up and down the tree without leaving the screen.\n\n
+
+        The layout will either be a fragment or a large ListView with adapter that can be recycled.  I\'m not sure which will provide the
+         best function vs. resource management.  As for the data, it will be retrieved from online sources and likely be in JSON.  So there
+        will have to be some JSON library functionality (unless the data is stored differently).
+    </string>
+
+    <string name="searchTreeText">
+        This screen will be for searching the database for trees that other users have uploaded, or to upload your own tree.  It will have \n
+        browse and search box functions for artists, songs, user uploaded and the like.  At some point it may have a social function.\n\n
+
+        The buttons will allow the user to import and start listening to the current tree, or import the tree for later use.  The final button uploads \n
+        the current tree and will prompt some input via a fragment, such as tree nickname.
+    </string>
+
+    <string name="newTreeText">
+        The create new tree screen will allow the user to start growing a new tree based on a song from their library or one from
+        the web.  If there\'s a problem being able to find the song on the web, we\'ll take that song and use predictive information
+        to select the starting point.  There will be a few text field for things like nicknames.  There are buttons to cancel and
+        buttons to start listening.
+    </string>
+</resources>

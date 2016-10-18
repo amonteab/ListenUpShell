@@ -44,6 +44,11 @@
         The search trees button will allow the user to search the online database of trees uploaded from other users around the world, bring them to
         the device and listen to them.  Perhaps give feedback as well.  Much later perhaps a more social component involved.\n\n\n\n
 
+        **Since this screen is the only one with play/pause, it will be where the implementation of the MediaPlayer and AudioManager classes are located.  In
+        addition, this will need some permissions in order to stream or located songs on the device.  It\'s hard to tell exactly what classes
+        are required, but it looks like I\'d be using AsyncTask for probably buffering/streaming and uploading.  And HttpPost or HttpClient to
+        upload to the server.  Pulling information offline will require ConnectivityManager class as well as InputStream and BufferedReader classes as well.
+
         The majority of the icons here were created by PixelBuddha and downloaded from FlatIcon.com.  The others were created by myself.
     </string>
 
@@ -58,7 +63,7 @@
         The swap button will also bring up a dialog or fragment for swapping trees saved on device, or redirect to the search tree activity. Or the search
          button will load said activity.\n\n
 
-        Both of these will include the fragment class and will have to explore using permissions to access device storage and web applications.
+        The swap screen will include the fragment class and will have to explore using permissions to access device storage and web applications.
     </string>
 
     <string name="songDetailsText">
@@ -67,15 +72,18 @@
 
         The layout will either be a fragment or a large ListView with adapter that can be recycled.  I\'m not sure which will provide the
          best function vs. resource management.  As for the data, it will be retrieved from online sources and likely be in JSON.  So there
-        will have to be some JSON library functionality (unless the data is stored differently).
+        will have to be some JSON library functionality (unless the data is stored differently).\n\n
+
+        **Pulling information from the server will require ConnectivityManager class as well as InputStream and BufferedReader classes.
     </string>
 
     <string name="searchTreeText">
         This screen will be for searching the database for trees that other users have uploaded, or to upload your own tree.  It will have \n
         browse and search box functions for artists, songs, user uploaded and the like.  At some point it may have a social function.\n\n
 
-        The buttons will allow the user to import and start listening to the current tree, or import the tree for later use.  The final button uploads \n
-        the current tree and will prompt some input via a fragment, such as tree nickname.
+        **The buttons will allow the user to import and start listening to the current tree, or import the tree for later use.  The final button uploads \n
+        the current tree and will prompt some input via a fragment, such as tree nickname.  To search a tree from the server, I\'ll probably
+        need HttpClient as well as some form of File class and likely an java.IO or InputStream Class.
     </string>
 
     <string name="newTreeText">
@@ -83,5 +91,9 @@
         the web.  If there\'s a problem being able to find the song on the web, we\'ll take that song and use predictive information
         to select the starting point.  There will be a few text field for things like nicknames.  There are buttons to cancel and
         buttons to start listening.
+
+        **The New Tree, Swap Tree, and Download Tree functions will all need to use the FileReader and FileWriter class.  If there\'s
+        a need, perhaps adding an SQLite or other form of database would be better, but for now processing info into JSON and reading
+        and writing from a file for tree structure info and cues on pulling band/song info from online sources.
     </string>
 </resources>
